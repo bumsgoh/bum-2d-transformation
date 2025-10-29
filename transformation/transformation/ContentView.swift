@@ -27,7 +27,7 @@ struct ContentView: View {
                onTap: {
         scene.update()
       })
-      .frame(width: 200)
+      .frame(width: 300)
     }
   }
 }

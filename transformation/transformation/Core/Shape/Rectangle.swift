@@ -39,8 +39,10 @@ extension Graphics {
       
       super.init()
       self.material[.body] = .init(color: .gray, lineColor: .black, lineWidth: 1)
+      //사각형 스펙: 회색배경, 검은색 라인
     }
     
+    //부모에서 그린 pivot과 자신의 path를 합쳐서 리턴
     override func render() -> [SubMeshType: Path] {
       var data = super.render()
       

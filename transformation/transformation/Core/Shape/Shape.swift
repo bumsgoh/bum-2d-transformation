@@ -47,21 +47,21 @@ extension Graphics {
     
     var position: CGPoint = .zero
     var rotation: CGFloat = .zero
-    var scale: CGFloat = 1
     
+    //이후에 부분마다 다른 material을 사용하고 싶은 니즈가 있으므로 키밸류로 저장
     var material: [SubMeshType: Material] = [.pivotPoint: .init(color: .red)]
     
     init() {
       self.pivot = .zero
     }
     
+    //pivot은 모든 shape에 들어가는 것으로 판단하여 pivot path를 그리는 함수 구현
     func render() -> [SubMeshType: Path] {
       let rect = CGRect(x:  -pivotPointSize / 2,
                         y:  -pivotPointSize / 2,
                         width: pivotPointSize,
                         height: pivotPointSize)
       var path = Path(ellipseIn: rect)
-      path.closeSubpath()
       return [.pivotPoint: path]
     }
   }

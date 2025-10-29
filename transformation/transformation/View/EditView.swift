@@ -152,7 +152,7 @@ struct PointRow: View {
       
       Spacer()
       
-      Text("\(Int(x)), \(Int(y))")
+      Text("\(Graphics.format(v: x, fraction: 2)), \(Graphics.format(v: y, fraction: 2))")
         .font(.system(size: 13, design: .monospaced))
         .foregroundColor(.primary)
     }

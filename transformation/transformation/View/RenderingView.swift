@@ -9,7 +9,6 @@ import SwiftUI
 
 struct RenderingView: View {
   @ObservedObject private var scene: Graphics.Scene
-  private var currentTime: TimeInterval = Date().timeIntervalSince1970
   @State var renderer = Graphics.Renderer()
   
   init(scene: Graphics.Scene) {
